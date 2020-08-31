@@ -1,6 +1,6 @@
 import path from "path";
-import uriDecoder from "./uri-decoder";
-import fsExistsSyncWithCase from "./fs-exists-sync-with-case";
+import uriDecoder from "./uri-decoder.js";
+import fsExistsSyncWithCase from "./fs-exists-sync-with-case.js";
 
 const validateLinks = (markdownLinks, opts) => {
   const validatedLinks = markdownLinks.map(md => {

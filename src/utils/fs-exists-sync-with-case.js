@@ -18,21 +18,28 @@ const fsExistsSyncWithCase = filePath => {
 };
 
 const scanDirectory = filePath => {
-  let fileDir = filePath;
-  let prevFilePath = filePath;
-  let result = null;
-  while (result === null) {
-    fileDir = path.dirname(fileDir);
-    if (fileDir === "/" || fileDir === ".") {
-      return (result = true);
+  // let fileDir = filePath;
+  // let prevFilePath = filePath;
+  // let result = null;
+  // while (result === null) {
+  //   fileDir = path.dirname(fileDir);
+  //   if (fileDir === "/" || fileDir === ".") {
+  //     return (result = true);
+  //   }
+  //   const fileNames = (cache[fileDir] = fs.readdirSync(fileDir));
+  //   if (fileNames.indexOf(path.basename(prevFilePath)) === -1) {
+  //     return (result = false);
+  //   }
+  //   prevFilePath = fileDir;
+  // }
+  // return result;
+  try {
+    if (fs.existsSync(filePath)) {
+      return true;
     }
-    const fileNames = (cache[fileDir] = fs.readdirSync(fileDir));
-    if (fileNames.indexOf(path.basename(prevFilePath)) === -1) {
-      return (result = false);
-    }
-    prevFilePath = fileDir;
+  } catch(err) {
+    return false;
   }
-  return result;
 };
 
 export default fsExistsSyncWithCase;

@@ -1,7 +1,7 @@
 import glob from "glob";
 import path from "path";
 import fs from "fs";
-import getRemarkIgnorePatterns from "./ignore";
+import getRemarkIgnorePatterns from "./ignore.js";
 
 import {
   MARKDOWN_LINK_MATCH,
@@ -9,7 +9,7 @@ import {
   HTML_LINK_MATCH,
   HTML_LINK_URL_MATCH,
   CODE_BLOCK_MATCH
-} from "../patterns";
+} from "../patterns/index.js";
 
 const collectMarkdownLinks = opts => {
   let markdownFiles = [];

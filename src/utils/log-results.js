@@ -6,7 +6,7 @@ import {
   logFailureMsg,
   logFailureList,
   logSuccessMsg
-} from "./log";
+} from "./log.js";
 
 // logResults is responsible for printing the final output of the cli to the terminal
 const logResults = validatedLinks => {
