@@ -8,6 +8,13 @@ A cli tool for identifying all broken local markdown links in a directory.
 npm install -g markdown-link-reporter
 ```
 
+## Build
+
+Build with webpack
+```
+npx webpack
+```
+
 ## Usage
 
 After installing, run the command `md-report` in your terminal. By default, this will scan all markdown files in your current working directory.
